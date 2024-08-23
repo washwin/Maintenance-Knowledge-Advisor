@@ -13,12 +13,13 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains import create_retrieval_chain
 from langchain_groq import ChatGroq
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-load_dotenv()
-groq_api_key=st.secrets["GROQ_API_KEY"]
-# os.environ("GOOGLE_API_KEY") = st.secrets["GOOGLE_API_KEY"]
-genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
+# load_dotenv()
+google_api_key = st.secrets['GOOGLE_API_KEY']
+groq_api_key = st.secrets['GROQ_API_KEY']
+# groq_api_key=GROQ_API_KEY
+genai.configure(api_key=google_api_key)
 
 
 
