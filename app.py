@@ -16,9 +16,9 @@ from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 
 load_dotenv()
-groq_api_key=os.getenv('GROQ_API_KEY')
-os.getenv("GOOGLE_API_KEY")
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+groq_api_key=st.secrets["GROQ_API_KEY"]
+# os.environ("GOOGLE_API_KEY") = st.secrets["GOOGLE_API_KEY"]
+genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
 
 
 
