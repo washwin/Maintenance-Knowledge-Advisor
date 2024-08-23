@@ -1,3 +1,5 @@
+google
+pypdf2
 langchain
 langchain_groq
 langchain_core
